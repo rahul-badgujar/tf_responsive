@@ -16,6 +16,8 @@ class Media {
 
 
   void init(BoxConstraints constraints, Orientation orientation) {
+    // for portrait assign maxWidth to width and maxHeight to height
+    // else assign maxHeight to width and maxWidth to height
     if (orientation == Orientation.portrait) {
       screenWidth = constraints.maxWidth;
       screenHeight = constraints.maxHeight;
@@ -25,6 +27,7 @@ class Media {
       screenHeight = constraints.maxWidth;
       tfOrientation = TfOrientation.landscape;
     }
+    // check the device size
     if(constraints.maxWidth <= 640){
       tfDeviceType = TfDeviceType.mobile;
     }else if(constraints.maxWidth > 640 && constraints.maxWidth <= 1007){
