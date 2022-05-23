@@ -34,6 +34,8 @@ class Media {
       tfDeviceType = TfDeviceType.tablet;
     }else{
       tfDeviceType = TfDeviceType.desktop;
+      screenWidth = constraints.maxWidth;
+      screenHeight = constraints.maxHeight;
     }
 
     _blockWidth = screenWidth / 100;
